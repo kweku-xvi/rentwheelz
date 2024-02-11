@@ -51,7 +51,7 @@ def sign_up_view(request):
 
 
 @api_view(['GET'])
-def verify_user_view(request):
+def verify_user_view(request): # verifying user's email
     if request.method == 'GET':
         token = request.GET.get('token')
 
