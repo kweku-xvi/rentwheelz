@@ -107,7 +107,7 @@ def verify_user_view(request): # verifying user's email
 
 
 @api_view(['POST'])
-def login_view(request):
+def login_view(request): # user login view
     if request.method == 'POST':
         serializer = LoginSerializer(data=request.data)
 
