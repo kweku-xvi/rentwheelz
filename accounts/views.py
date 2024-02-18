@@ -112,7 +112,7 @@ def login_view(request): # user login view
         serializer = LoginSerializer(data=request.data)
 
         if serializer.is_valid(raise_exception=True):
-            tokens = serializer.generate_jwt_tokens(serializer.validated_data)
+            tokens = serializer.generate_jwt_tokens(serializer.validated_data) # get user tokens
 
             return Response(
                 {
